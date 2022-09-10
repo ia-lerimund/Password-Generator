@@ -107,7 +107,9 @@ function randomChar() {
 }
 function generatePassword() {
 	let randomPassword = "";
-	if (number.value == "") {
+	if (number.valueAsNumber > 15 || number.valueAsNumber < 4) {
+		alert("Please choose number between 4 and 15");
+	} else if (number.value == "") {
 		for (let i = 0; i < 15; i++) {
 			randomPassword += randomChar();
 		}
