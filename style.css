@@ -38,10 +38,12 @@ input {
 	border: #384a64;
 }
 #number {
+	height: 2em;
 	text-align: center;
 	width: 3em;
 }
 #text {
+	height: 2em;
 	width: 40%;
 	padding-left: 10px;
 }
