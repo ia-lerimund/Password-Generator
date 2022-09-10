@@ -94,11 +94,11 @@ let number = document.getElementById("number");
 function randomChar() {
 	let wholeArr = letters.concat(numbers).concat(specChars);
 	let randomChar = Math.floor(Math.random() * wholeArr.length);
-	if (text.value === "numbers") {
+	if (text.value.toLowerCase() === "numbers") {
 		wholeArr = letters.concat(specChars);
 		randomChar = Math.floor(Math.random() * wholeArr.length);
 		return wholeArr[randomChar];
-	} else if (text.value === "special chars") {
+	} else if (text.value.toLowerCase() === "special chars") {
 		wholeArr = letters.concat(numbers);
 		randomChar = Math.floor(Math.random() * wholeArr.length);
 		return wholeArr[randomChar];
