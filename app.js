@@ -111,6 +111,8 @@ function generatePassword() {
 		for (let i = 0; i < 15; i++) {
 			randomPassword += randomChar();
 		}
+	} else if (number.value > "15") {
+		alert("Choose the valid length");
 	} else if (number.value !== "") {
 		for (let i = 0; i < number.valueAsNumber; i++) {
 			randomPassword += randomChar();
