@@ -103,11 +103,12 @@ function randomChar() {
 		randomChar = Math.floor(Math.random() * wholeArr.length);
 		return wholeArr[randomChar];
 	}
-	return wholeArr[randomChar];
 }
 function generatePassword() {
 	let randomPassword = "";
-	if (number.value == "") {
+	if (number.valueAsNumber > 15) {
+		alert("Please choose length between 4 and 15");
+	} else if (number.value == "") {
 		for (let i = 0; i < 15; i++) {
 			randomPassword += randomChar();
 		}
