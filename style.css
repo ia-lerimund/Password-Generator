@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #1f2937;
+	color: white;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	width: 40%;
+}
+.main-section h1 {
+	font-size: 3rem;
+	margin-bottom: 0.2em;
+}
+.main-section p {
+	color: #d5d4d8;
+	font-size: 1.7rem;
+	margin-bottom: 1.5em;
+}
+.main-section span {
+	color: #4adf86;
+}
+form {
+	display: flex;
+	flex-direction: column;
+}
+input {
+	background: #3c4f69;
+	color: white;
+	height: 1.5em;
+	margin: 1em 0;
+	border-radius: 5px;
+	border: #384a64;
+}
+#number {
+	text-align: center;
+	width: 3em;
+}
+#text {
+	width: 40%;
+	padding-left: 10px;
+}
+.generate-btn {
+	margin: 2em 0;
+	border-bottom: 2px solid #2f3e53;
+	padding-bottom: 2em;
+}
+#generateBtn {
+	text-align: center;
+	color: #ecfdf5;
+	font-size: 1.1rem;
+	padding: 0.6em 0.6em;
+	background: #10b981;
+	border-radius: 5px;
+	width: 25%;
+	cursor: pointer;
+}
+#generateBtn:hover {
+	background: #10b981c6;
+}
+#generateBtn:active {
+	background: #10b981;
+}
+.generate-section {
+	color: #55f991;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+}
+.option {
+	background: #2f3e53;
+	border-radius: 5px;
+	width: 50%;
+	padding: 0.8em;
+	cursor: pointer;
+}
+.option:active {
+	background: #3c4f69;
+}
+.option1 {
+	margin-right: 1rem;
+}
+.option2 {
+	margin-left: 1rem;
+}
+i {
+	color: #d5d4d8;
+	cursor: pointer;
+	margin-right: 1em;
+	opacity: 1;
+}
+@media (max-width: 1200px) {
+	.container {
+		width: 80%;
+	}
+}
+@media (max-width: 800px) {
+	#text {
+		min-width: 50%;
+	}
+	#generateBtn {
+		width: 40%;
+	}
+	.main-section p {
+		font-size: 1.6rem;
+	}
+}
+@media (max-width: 450px) {
+	span {
+		font-size: 2.5rem;
+	}
+	.main-section p {
+		font-size: 1.2rem;
+	}
+	#generateBtn {
+		width: 50%;
+	}
+	.generate-section {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.option {
+		margin: 10px;
+		width: 70%;
+	}
+	.details-section {
+		margin: 3em 0;
+	}
+	.container {
+		width: auto;
+	}
+}
