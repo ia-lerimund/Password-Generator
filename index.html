@@ -4,9 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
 		/>
 		<link rel="stylesheet" href="style.css" />
 		<title>Password Generator</title>
@@ -18,17 +20,22 @@
 				<p>Never use an insecure password again.</p>
 			</div>
 			<form>
-				<label for="number"
+				<label for="vol"
 					>Choose the length (from 4 to 15 chars, auto: 15):</label
 				>
-				<input
-					type="number"
-					id="number"
-					name="number"
-					max="15"
-					min="4"
-					required
-				/>
+				<div class="number">
+					<input
+						type="range"
+						id="vol"
+						name="vol"
+						max="15"
+						min="4"
+						value="4"
+						oninput="this.nextElementSibling.value = this.value"
+						required
+					/>
+					<output>4</output>
+				</div>
 				<label for="text"
 					>Write which chars to avoid (numbers, special chars, auto:
 					none):</label
