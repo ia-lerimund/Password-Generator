@@ -89,7 +89,7 @@ let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
 let button = document.getElementById("generateBtn");
 let text = document.getElementById("text");
-let number = document.getElementById("number");
+let number = document.getElementById("vol");
 
 function randomChar() {
 	let wholeArr = letters.concat(numbers).concat(specChars);
@@ -107,9 +107,7 @@ function randomChar() {
 }
 function generatePassword() {
 	let randomPassword = "";
-	if (number.valueAsNumber > 15 || number.valueAsNumber < 4) {
-		alert("Please choose number between 4 and 15");
-	} else if (number.value == "") {
+	if (number.value == "") {
 		for (let i = 0; i < 15; i++) {
 			randomPassword += randomChar();
 		}
@@ -138,4 +136,3 @@ function copyOption2() {
 button.onclick = launch;
 option1.onclick = copyOption1;
 option2.onclick = copyOption2;
-
