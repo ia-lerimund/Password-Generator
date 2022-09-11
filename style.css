@@ -3,6 +3,7 @@
 	padding: 0;
 }
 body {
+	font-family: "IBM Plex Sans", sans-serif;
 	background: #1f2937;
 	color: white;
 	height: 100vh;
@@ -37,10 +38,21 @@ input {
 	border-radius: 5px;
 	border: #384a64;
 }
-#number {
+#vol {
 	height: 2em;
 	text-align: center;
-	width: 3em;
+	width: 40%;
+	height: 0.9em;
+}
+.number {
+	display: flex;
+	align-items: center;
+}
+output {
+	padding-left: 1em;
+}
+input {
+	margin-top: 1.2em;
 }
 #text {
 	height: 2em;
@@ -59,7 +71,7 @@ input {
 	padding: 0.6em 0.6em;
 	background: #10b981;
 	border-radius: 5px;
-	width: 25%;
+	width: 27%;
 	cursor: pointer;
 }
 #generateBtn:hover {
@@ -137,4 +149,37 @@ i {
 	.container {
 		width: 80%;
 	}
+}
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	input[type="range"] {
+		overflow: hidden;
+		-webkit-appearance: none;
+		background-color: #3c4f69;
+		height: 1em;
+	}
+	input[type="range"]::-webkit-slider-thumb {
+		width: 1em;
+		-webkit-appearance: none;
+		height: 1em;
+		cursor: pointer;
+		background: white;
+		box-shadow: -150px 0 0 145px #10b981;
+		border-radius: 50%;
+	}
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+	background-color: #10b981;
+}
+input[type="range"]::-moz-range-track {
+	background-color: #3c4f69;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+	background-color: #10b981;
+}
+input[type="range"]::-ms-fill-upper {
+	background-color: #3c4f69;
 }
